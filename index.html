@@ -7,7 +7,7 @@
   <meta name="description" content="In-person and telehealth therapy for individuals, couples and families in Honolulu. Mālama Counseling accepts select Hawaiʻi insurance plans.">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="author" content="Mālama Counseling Services LLC">
-  <meta name="theme-color" content="#243d36">
+  <meta name="theme-color" content="#203305">
   <meta name="format-detection" content="telephone=yes">
   <meta name="geo.region" content="US-HI">
   <meta name="geo.placename" content="Honolulu, Hawaiʻi">
@@ -92,19 +92,19 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --forest: #243d36;
-      --forest-2: #315047;
-      --sage: #a8b5a2;
-      --sage-light: #dfe6dc;
-      --sand: #e9dfd1;
-      --cream: #f7f4ee;
-      --paper: #fffdf9;
-      --clay: #b87359;
-      --clay-dark: #925741;
-      --ink: #292b29;
-      --muted: #656b66;
-      --line: rgba(36, 61, 54, .16);
-      --shadow: 0 24px 65px rgba(36, 61, 54, .12);
+      --forest: #203305;
+      --forest-2: #344e0c;
+      --sage: #749249;
+      --sage-light: #e5ebd8;
+      --sand: #edf0e3;
+      --cream: #f8f7f0;
+      --paper: #fffef9;
+      --clay: #6e8e1f;
+      --clay-dark: #536d18;
+      --ink: #28301f;
+      --muted: #62695b;
+      --line: rgba(32, 51, 5, .16);
+      --shadow: 0 24px 65px rgba(32, 51, 5, .13);
       --radius: 28px;
       --serif: "Fraunces", Georgia, serif;
       --sans: "DM Sans", Arial, sans-serif;
@@ -205,17 +205,21 @@
       width: 720px;
       height: 720px;
       content: "";
-      border: 1px solid rgba(168, 181, 162, .55);
+      border: 1px solid rgba(110, 142, 31, .34);
       border-radius: 48% 52% 63% 37%;
       transform: rotate(17deg);
     }
+    .fern-motif { position: absolute; z-index: -1; pointer-events: none; color: var(--clay); }
+    .fern-motif-hero { bottom: -145px; left: -95px; width: min(370px, 31vw); opacity: .13; transform: rotate(-17deg); transform-origin: bottom center; }
+    .fern-motif .fern-stem { fill: none; stroke: currentColor; stroke-linecap: round; stroke-width: 5; }
+    .fern-motif .fern-leaf { fill: currentColor; }
     .hero-grid { display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: clamp(42px, 7vw, 100px); }
     .hero-copy { position: relative; z-index: 2; }
     .hero-copy .lede { max-width: 610px; margin-top: 27px; }
     .hero-note { display: flex; align-items: center; gap: 10px; margin-top: 28px; color: var(--forest); font-size: .9rem; }
     .hero-note::before { width: 34px; height: 1px; content: ""; background: var(--clay); }
-    .availability-pill { width: fit-content; display: inline-flex; align-items: center; gap: 9px; margin-top: 18px; padding: 9px 14px; color: var(--forest); border: 1px solid rgba(36,61,54,.18); border-radius: 999px; background: rgba(223,230,220,.72); font-size: .8rem; font-weight: 600; }
-    .availability-pill::before { width: 8px; height: 8px; content: ""; border-radius: 50%; background: #4d8a66; box-shadow: 0 0 0 4px rgba(77,138,102,.13); }
+    .availability-pill { width: fit-content; display: inline-flex; align-items: center; gap: 9px; margin-top: 18px; padding: 9px 14px; color: var(--forest); border: 1px solid rgba(32,51,5,.18); border-radius: 999px; background: rgba(229,235,216,.82); font-size: .8rem; font-weight: 600; }
+    .availability-pill::before { width: 8px; height: 8px; content: ""; border-radius: 50%; background: #6e8e1f; box-shadow: 0 0 0 4px rgba(110,142,31,.16); }
     .hero-visual { position: relative; min-height: 590px; }
     .hero-photo {
       position: absolute;
@@ -271,7 +275,7 @@
 
     /* Support areas */
     .support { padding: 128px 0; background: var(--forest); }
-    .support .eyebrow { color: #e6bba8; }
+    .support .eyebrow { color: #c9dc89; }
     .support h2, .support h3 { color: var(--cream); }
     .support .lede { color: rgba(247, 244, 238, .72); }
     .support-head { display: flex; align-items: end; justify-content: space-between; gap: 50px; margin-bottom: 52px; }
@@ -296,18 +300,20 @@
     .signature span { color: var(--muted); font-size: .88rem; }
 
     /* Therapeutic approach */
-    .approach { padding: 128px 0; background: var(--cream); }
-    .approach-head { max-width: 840px; margin-bottom: 54px; }
-    .approach-head h2 { margin-bottom: 24px; }
-    .approach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .approach-card { padding: 31px; border: 1px solid var(--line); border-radius: 24px; background: var(--paper); }
-    .approach-card span { display: block; margin-bottom: 25px; color: var(--clay-dark); font-size: .75rem; font-weight: 600; letter-spacing: .14em; }
-    .approach-card h3 { margin-bottom: 17px; font-size: 1.8rem; }
-    .approach-card p { margin: 0; color: var(--muted); }
-    .approach-quote { position: relative; margin-top: 18px; padding: clamp(35px, 6vw, 72px); overflow: hidden; color: rgba(255,255,255,.86); border-radius: 30px; background: var(--forest); }
-    .approach-quote::before { position: absolute; top: -45px; right: 25px; content: "“"; color: rgba(255,255,255,.08); font-family: var(--serif); font-size: 18rem; line-height: 1; }
-    .approach-quote blockquote { position: relative; max-width: 940px; margin: 0; font-family: var(--serif); font-size: clamp(1.75rem, 3.3vw, 3.2rem); font-weight: 600; line-height: 1.18; }
-    .approach-quote cite { display: block; margin-top: 25px; color: #e6bba8; font-size: .82rem; font-style: normal; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+    .approach { position: relative; padding: 128px 0; overflow: hidden; background: var(--sage-light); isolation: isolate; }
+    .approach .container { position: relative; z-index: 1; }
+    .approach-botanicals { position: absolute; z-index: -1; inset: 0; width: 100%; height: 100%; color: var(--clay); pointer-events: none; }
+    .approach-shell { display: grid; grid-template-columns: .92fr 1.08fr; overflow: hidden; border: 1px solid rgba(32,51,5,.12); border-radius: 34px; background: rgba(255,254,249,.91); box-shadow: 0 28px 70px rgba(32,51,5,.08); }
+    .approach-story { padding: clamp(42px, 6vw, 76px); border-right: 1px solid var(--line); }
+    .approach-story h2 { max-width: 590px; margin-bottom: 32px; }
+    .approach-lead { color: var(--forest); font-family: var(--serif); font-size: clamp(1.45rem, 2.25vw, 2.15rem); font-weight: 600; line-height: 1.28; }
+    .approach-story-copy { max-width: 620px; margin-top: 25px; color: var(--muted); font-size: 1.06rem; }
+    .approach-methods { display: flex; flex-direction: column; padding: clamp(24px, 4vw, 48px); }
+    .approach-method { display: grid; grid-template-columns: 58px 1fr; gap: 20px; padding: 28px 0; border-bottom: 1px solid var(--line); }
+    .approach-method:last-child { border-bottom: 0; }
+    .approach-method-number { display: grid; width: 44px; height: 44px; place-items: center; color: white; border-radius: 50%; background: var(--clay); font-size: .73rem; font-weight: 600; letter-spacing: .08em; }
+    .approach-method h3 { margin-bottom: 10px; font-size: clamp(1.55rem, 2vw, 2rem); }
+    .approach-method p { margin: 0; color: var(--muted); }
 
     /* Office gallery */
     .office-gallery { padding: 128px 0; background: var(--paper); }
@@ -355,7 +361,7 @@
     .visit { padding: 128px 0; }
     .visit-grid { display: grid; grid-template-columns: .78fr 1.22fr; align-items: stretch; gap: 24px; }
     .visit-info { padding: clamp(35px, 5vw, 62px); color: var(--cream); border-radius: var(--radius); background: var(--forest); }
-    .visit-info .eyebrow { color: #e6bba8; }
+    .visit-info .eyebrow { color: #c9dc89; }
     .visit-info h2 { color: var(--cream); }
     .visit-info > p { margin-top: 25px; color: rgba(255,255,255,.72); }
     address { margin: 34px 0; padding: 23px 0; border-block: 1px solid rgba(255,255,255,.16); color: white; font-style: normal; }
@@ -387,7 +393,7 @@
     .field.full { grid-column: 1 / -1; }
     label { color: var(--forest); font-size: .84rem; font-weight: 600; }
     input, select, textarea { width: 100%; padding: 15px 16px; color: var(--ink); border: 1px solid rgba(36,61,54,.25); border-radius: 12px; outline: none; background: var(--cream); }
-    input:focus, select:focus, textarea:focus { border-color: var(--clay); box-shadow: 0 0 0 3px rgba(184,115,89,.13); }
+    input:focus, select:focus, textarea:focus { border-color: var(--clay); box-shadow: 0 0 0 3px rgba(110,142,31,.18); }
     textarea { min-height: 145px; resize: vertical; }
     .form-note { grid-column: 1 / -1; margin: 0; color: var(--muted); font-size: .78rem; }
     .contact button { cursor: pointer; }
@@ -399,7 +405,7 @@
     .crisis-icon { display: grid; width: 38px; height: 38px; place-items: center; color: white; border-radius: 50%; background: var(--clay); font-weight: 600; }
     .crisis strong { color: var(--forest); }
     .crisis p { margin: 3px 0 0; color: var(--muted); font-size: .88rem; }
-    footer { padding: 64px 0 30px; color: rgba(255,255,255,.75); background: #1b302a; }
+    footer { padding: 64px 0 30px; color: rgba(255,255,255,.75); background: #182704; }
     .footer-grid { display: grid; grid-template-columns: 1.4fr .6fr .75fr; gap: 50px; }
     footer .wordmark { color: var(--cream); }
     .footer-blurb { max-width: 430px; margin-top: 22px; font-size: .9rem; }
@@ -417,13 +423,15 @@
       .nav-links.open { display: flex; }
       .nav-links > a:not(.btn) { padding: 8px 2px; }
       .hero { min-height: auto; }
+      .fern-motif-hero { left: -120px; width: 330px; opacity: .1; }
       .hero-grid, .welcome-grid, .about-grid, .insurance-grid, .visit-grid, .contact-grid, .office-gallery-head { grid-template-columns: 1fr; }
       .hero-visual { min-height: 530px; }
       .hero-photo { inset-left: 0; }
       .welcome-copy { padding-top: 0; }
       .section-head { grid-template-columns: 1fr; gap: 24px; }
       .service-grid { grid-template-columns: 1fr; }
-      .approach-grid { grid-template-columns: 1fr; }
+      .approach-shell { grid-template-columns: 1fr; }
+      .approach-story { border-right: 0; border-bottom: 1px solid var(--line); }
       .service-card { min-height: 330px; }
       .support-head { display: block; }
       .support-head .lede { margin-top: 24px; }
@@ -443,6 +451,7 @@
       .site-header .btn { width: 100%; }
       .hero, .welcome, .services, .support, .about, .approach, .office-gallery, .insurance, .booking, .visit, .contact { padding: 88px 0; }
       .hero { padding-top: 56px; }
+      .fern-motif-hero { bottom: -80px; left: -105px; width: 260px; opacity: .09; }
       .hero-visual { min-height: 440px; margin-top: 12px; }
       .hero-photo { inset: 0 0 25px 15px; border-radius: 145px 145px 25px 25px; }
       .photo-label { right: 10px; max-width: 205px; padding: 16px; font-size: 1.2rem; }
@@ -451,6 +460,8 @@
       .support-group, .support-group:nth-child(even) { padding: 30px 0; border-left: 0; }
       .about-image-wrap { width: calc(100% - 12px); }
       .mock-badge { right: -12px; }
+      .approach-story, .approach-methods { padding: 30px; }
+      .approach-method { grid-template-columns: 46px 1fr; gap: 14px; }
       .office-media-grid { display: block; }
       .office-media { min-height: 280px; margin-bottom: 14px; }
       .office-media-video { min-height: 560px; }
@@ -474,7 +485,7 @@
   <header class="site-header" id="site-header">
     <div class="container nav">
       <a class="wordmark" href="#top" aria-label="Mālama Counseling Services home">
-        <strong>Mālama</strong>
+        <strong>M&#257;lama</strong>
         <span>Counseling Services LLC</span>
       </a>
       <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu">☰</button>
@@ -490,6 +501,21 @@
 
   <main id="main">
     <section class="hero" id="top">
+      <svg class="fern-motif fern-motif-hero" viewBox="0 0 300 640" aria-hidden="true" focusable="false">
+        <path class="fern-stem" d="M145 625C150 510 143 393 156 279C164 204 176 129 194 36"/>
+        <g class="fern-leaf">
+          <path d="M149 559C111 533 67 530 28 548C70 558 109 570 149 559Z"/><path d="M150 545C184 511 225 497 268 501C233 522 195 542 150 545Z"/>
+          <path d="M150 500C115 473 76 464 38 475C75 490 111 507 150 500Z"/><path d="M152 486C184 452 222 436 263 438C230 460 194 482 152 486Z"/>
+          <path d="M152 442C120 414 84 402 48 410C83 428 116 446 152 442Z"/><path d="M154 427C183 393 218 376 256 376C225 400 191 422 154 427Z"/>
+          <path d="M155 384C126 356 94 342 60 347C92 366 122 385 155 384Z"/><path d="M157 369C183 335 214 318 249 316C221 340 190 363 157 369Z"/>
+          <path d="M159 327C133 300 104 284 74 287C102 307 130 327 159 327Z"/><path d="M161 313C184 280 212 261 243 258C218 283 190 306 161 313Z"/>
+          <path d="M165 271C143 246 119 229 91 229C116 249 140 270 165 271Z"/><path d="M168 257C188 226 211 208 238 202C217 227 194 250 168 257Z"/>
+          <path d="M173 216C154 193 134 177 111 175C131 194 151 214 173 216Z"/><path d="M176 203C192 176 212 157 234 151C216 174 197 196 176 203Z"/>
+          <path d="M181 164C166 145 150 131 131 128C147 144 164 161 181 164Z"/><path d="M184 152C197 129 213 113 231 105C217 126 202 146 184 152Z"/>
+          <path d="M190 116C179 102 167 91 153 87C165 100 177 113 190 116Z"/><path d="M192 105C202 88 214 75 228 68C217 84 205 100 192 105Z"/>
+          <path d="M197 73C190 64 183 57 174 53C182 61 189 69 197 73Z"/><path d="M199 65C207 53 216 44 226 38C218 50 209 61 199 65Z"/>
+        </g>
+      </svg>
       <div class="container hero-grid">
         <div class="hero-copy reveal">
           <p class="eyebrow">In-person &amp; telehealth counseling · Honolulu, Hawaiʻi</p>
@@ -611,32 +637,46 @@
     </section>
 
     <section class="approach" id="approach">
+      <svg class="approach-botanicals" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+        <defs>
+          <g id="kupu-sprig">
+            <path d="M18 410C112 320 168 212 210 24" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+            <g fill="currentColor">
+              <path d="M52 367C25 330 2 318-25 322C-2 342 19 364 52 367Z"/><path d="M61 354C101 336 127 337 151 350C121 358 94 364 61 354Z"/>
+              <path d="M85 319C56 283 31 273 4 279C29 297 52 317 85 319Z"/><path d="M94 305C132 285 159 285 183 296C153 306 126 313 94 305Z"/>
+              <path d="M116 267C88 234 64 225 39 232C62 248 85 267 116 267Z"/><path d="M125 253C160 232 185 230 208 239C181 250 156 259 125 253Z"/>
+              <path d="M144 215C119 186 97 178 74 185C95 200 115 215 144 215Z"/><path d="M153 201C184 180 207 176 228 184C203 196 181 204 153 201Z"/>
+              <path d="M168 165C147 141 128 134 108 140C126 153 144 166 168 165Z"/><path d="M177 152C203 132 223 127 241 133C220 145 200 153 177 152Z"/>
+              <path d="M188 118C172 100 157 94 142 98C156 108 170 119 188 118Z"/><path d="M196 106C216 90 231 85 246 89C229 99 213 107 196 106Z"/>
+            </g>
+          </g>
+        </defs>
+        <use href="#kupu-sprig" transform="translate(10 580) rotate(-14) scale(1.18)" opacity=".075"/>
+        <use href="#kupu-sprig" transform="translate(1380 70) rotate(27) scale(.85)" opacity=".055"/>
+        <use href="#kupu-sprig" transform="translate(1060 760) rotate(76) scale(.62)" opacity=".045"/>
+      </svg>
       <div class="container">
-        <div class="approach-head reveal">
-          <p class="eyebrow">How I work</p>
-          <h2>Therapy that adapts to you.</h2>
-          <p class="lede">Rather than relying on one rigid framework, Kali draws from different therapeutic approaches to create care that reflects each client’s needs, goals and pace.</p>
-        </div>
-        <div class="approach-grid">
-          <article class="approach-card reveal">
-            <span>01 · INTEGRATIVE</span>
-            <h3>Integrative Approach</h3>
-            <p>Combining different therapeutic theories into a cohesive, personalized treatment plan.</p>
-          </article>
-          <article class="approach-card reveal">
-            <span>02 · ECLECTIC</span>
-            <h3>Eclectic Approach</h3>
-            <p>Selecting effective, practical techniques from different disciplines to support immediate problem-solving.</p>
-          </article>
-          <article class="approach-card reveal">
-            <span>03 · CLIENT-CENTERED</span>
-            <h3>Client-Centered Integration</h3>
-            <p>Tailoring diverse modalities specifically to each client’s goals, experiences and preferred pace.</p>
-          </article>
-        </div>
-        <div class="approach-quote reveal">
-          <blockquote>I practice integrative psychotherapy, moving away from rigid frameworks to meet you exactly where you are. By blending the deep insight of psychodynamic therapy with the practical, present-moment tools of CBT, DBT and mindfulness, we co-create a customized path toward healing and growth.</blockquote>
-          <cite>— Kali Ikemoto, LMFT</cite>
+        <div class="approach-shell reveal">
+          <div class="approach-story">
+            <p class="eyebrow">How Kali works</p>
+            <h2>Therapy that meets you where you are.</h2>
+            <p class="approach-lead">Kali practices integrative psychotherapy, moving away from rigid frameworks to create care that feels personal, flexible and grounded in each client’s lived experience.</p>
+            <p class="approach-story-copy">By blending the deeper insight of psychodynamic therapy with practical, present-moment tools from CBT, DBT and mindfulness, Kali works collaboratively with each client to create a customized path toward healing and growth.</p>
+          </div>
+          <div class="approach-methods" aria-label="Kali’s therapeutic approaches">
+            <article class="approach-method">
+              <span class="approach-method-number">01</span>
+              <div><h3>Integrative</h3><p>Different therapeutic theories are brought together into one cohesive, personalized treatment plan.</p></div>
+            </article>
+            <article class="approach-method">
+              <span class="approach-method-number">02</span>
+              <div><h3>Eclectic</h3><p>Effective, practical techniques are selected from different disciplines to support meaningful problem-solving.</p></div>
+            </article>
+            <article class="approach-method">
+              <span class="approach-method-number">03</span>
+              <div><h3>Client-Centered</h3><p>Every modality is tailored to the client’s goals, experiences, needs and preferred pace.</p></div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -777,7 +817,7 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <a class="wordmark" href="#top"><strong>Mālama</strong><span>Counseling Services LLC</span></a>
+          <a class="wordmark" href="#top"><strong>M&#257;lama</strong><span>Counseling Services LLC</span></a>
           <p class="footer-blurb">Compassionate in-person and telehealth counseling for individuals, couples and families in Honolulu, Hawaiʻi.</p>
         </div>
         <div class="footer-links"><p class="footer-title">Explore</p><a href="#about">About Kali</a><a href="#services">Services</a><a href="#insurance">Insurance</a><a href="#book">Book a Session</a></div>
