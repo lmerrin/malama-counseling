@@ -126,22 +126,6 @@
     a { color: inherit; }
     button, input, select, textarea { font: inherit; }
     section { scroll-margin-top: 90px; }
-    main > section:not(.hero), footer { position: relative; overflow: hidden; isolation: isolate; }
-    main > section:not(.hero)::before, footer::before {
-      position: absolute;
-      z-index: -1;
-      inset: 0;
-      content: "";
-      background-image: url("assets/kupukupu-traced-outline.webp");
-      background-position: right -145px bottom -105px;
-      background-repeat: no-repeat;
-      background-size: 510px auto;
-      filter: brightness(0) saturate(100%) invert(23%) sepia(11%) saturate(930%) hue-rotate(110deg) brightness(91%);
-      opacity: .11;
-      pointer-events: none;
-    }
-    main > section:nth-of-type(even)::before { background-position: left -145px top -105px; transform: scaleX(-1); }
-    .support::before, footer::before { filter: none; opacity: .13; }
 
     .skip-link {
       position: fixed;
@@ -227,7 +211,6 @@
       border-radius: 48% 52% 63% 37%;
       transform: rotate(17deg);
     }
-    .hero::after { position: absolute; z-index: -1; right: -145px; bottom: -100px; width: 510px; height: 380px; content: ""; background: url("assets/kupukupu-traced-outline.webp") center / contain no-repeat; filter: brightness(0) saturate(100%) invert(23%) sepia(11%) saturate(930%) hue-rotate(110deg) brightness(91%); opacity: .08; pointer-events: none; }
     .hero-grid { display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: clamp(42px, 7vw, 100px); }
     .hero-copy { position: relative; z-index: 2; }
     .hero-copy .lede { max-width: 610px; margin-top: 27px; }
@@ -316,7 +299,6 @@
 
     /* Therapeutic approach */
     .approach { padding: 128px 0; background: var(--cream); }
-    .approach::before { filter: brightness(0) saturate(100%) invert(23%) sepia(11%) saturate(930%) hue-rotate(110deg) brightness(91%); opacity: .09; }
     .approach-intro { max-width: 880px; margin: 0 auto; text-align: center; }
     .approach-intro .eyebrow { color: var(--clay-dark); }
     .approach-intro h2 { margin-bottom: 30px; color: var(--forest); }
@@ -438,7 +420,6 @@
       .nav-links.open { display: flex; }
       .nav-links > a:not(.btn) { padding: 8px 2px; }
       .hero { min-height: auto; }
-      .hero::after { right: -190px; opacity: .065; }
       .hero-grid, .welcome-grid, .about-grid, .insurance-grid, .visit-grid, .contact-grid, .office-gallery-head { grid-template-columns: 1fr; }
       .hero-visual { min-height: 530px; }
       .hero-photo { inset-left: 0; }
@@ -467,7 +448,6 @@
       .site-header .btn { width: 100%; }
       .hero, .welcome, .services, .support, .about, .approach, .office-gallery, .insurance, .booking, .visit, .contact { padding: 88px 0; }
       .hero { padding-top: 56px; }
-      .hero::after { right: -220px; bottom: -90px; width: 440px; opacity: .055; }
       .hero-visual { min-height: 440px; margin-top: 12px; }
       .hero-photo { inset: 0 0 25px 15px; border-radius: 145px 145px 25px 25px; }
       .photo-label { right: 10px; max-width: 205px; padding: 16px; font-size: 1.2rem; }
