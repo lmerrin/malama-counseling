@@ -394,7 +394,6 @@
     textarea { min-height: 145px; resize: vertical; }
     .form-note { grid-column: 1 / -1; margin: 0; color: var(--muted); font-size: .78rem; }
     .contact button { cursor: pointer; }
-    .success-message { display: none; grid-column: 1 / -1; padding: 15px; color: var(--forest); border-radius: 12px; background: var(--sage-light); }
 
     /* Crisis + Footer */
     .crisis { padding: 40px 0; border-top: 1px solid var(--line); background: var(--paper); }
@@ -463,7 +462,7 @@
       .office-media { min-height: 280px; margin-bottom: 14px; }
       .office-media-video { min-height: 560px; }
       .form-grid { grid-template-columns: 1fr; }
-      .field.full, .form-note, .success-message { grid-column: auto; }
+      .field.full, .form-note { grid-column: auto; }
       .footer-grid { grid-template-columns: 1fr; }
       .footer-grid > div:first-child { grid-column: auto; }
       .copyright { flex-direction: column; }
@@ -757,14 +756,16 @@
             <span>Ala Moana Medical Building · Suite 1740<br>1441 Kapiolani Boulevard<br>Honolulu, HI 96814</span>
           </div>
         </div>
-        <form class="form-grid reveal" id="contact-form">
+        <form class="form-grid reveal" id="contact-form" action="https://formsubmit.co/kikemoto@malamacounseling.com" method="POST" accept-charset="UTF-8">
+          <input type="hidden" name="_subject" value="New general inquiry from Mālama Counseling Services website">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
           <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div>
           <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
           <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
           <div class="field"><label for="contact-method">Preferred contact method</label><select id="contact-method" name="contact-method"><option>Email</option><option>Phone</option></select></div>
-          <div class="field full"><label for="message">General message</label><textarea id="message" name="message" required></textarea></div>
-          <p class="form-note">Please do not include confidential, medical or emergency information. This form is intended for general inquiries only.</p>
-          <div class="success-message" id="success-message" role="status">This preview form is not connected. Please use the secure SimplePractice portal for appointment requests.</div>
+          <div class="field full"><label for="message">General question <span aria-hidden="true">—</span> no medical information</label><textarea id="message" name="message" required></textarea></div>
+          <p class="form-note">Please do not include confidential, medical or emergency information. Email is not a secure channel. Appointment requests, clinical information and client forms should be submitted through SimplePractice.</p>
           <div class="field full"><button class="btn btn-primary" type="submit">Send General Inquiry <span class="arrow" aria-hidden="true">↗</span></button></div>
         </form>
       </div>
@@ -820,10 +821,6 @@
     }, { threshold: .12 });
     document.querySelectorAll('.reveal').forEach(el => reducedMotion ? el.classList.add('visible') : observer.observe(el));
 
-    document.getElementById('contact-form').addEventListener('submit', event => {
-      event.preventDefault();
-      document.getElementById('success-message').style.display = 'block';
-    });
   </script>
 </body>
 </html>
