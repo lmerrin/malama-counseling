@@ -7,7 +7,7 @@
   <meta name="description" content="In-person and telehealth therapy for individuals, couples and families in Honolulu. Mālama Counseling accepts select Hawaiʻi insurance plans.">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="author" content="Mālama Counseling Services LLC">
-  <meta name="theme-color" content="#203305">
+  <meta name="theme-color" content="#243d36">
   <meta name="format-detection" content="telephone=yes">
   <meta name="geo.region" content="US-HI">
   <meta name="geo.placename" content="Honolulu, Hawaiʻi">
@@ -92,21 +92,21 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --forest: #203305;
-      --forest-2: #344e0c;
-      --sage: #749249;
-      --sage-light: #e5ebd8;
-      --sand: #edf0e3;
-      --cream: #f8f7f0;
-      --paper: #fffef9;
-      --clay: #6e8e1f;
-      --clay-dark: #536d18;
+      --forest: #243d36;
+      --forest-2: #315047;
+      --sage: #a8b5a2;
+      --sage-light: #dfe6dc;
+      --sand: #e9dfd1;
+      --cream: #f7f4ee;
+      --paper: #fffdf9;
+      --clay: #b87359;
+      --clay-dark: #925741;
       --terra: #b87359;
       --terra-dark: #925741;
-      --ink: #28301f;
-      --muted: #62695b;
-      --line: rgba(32, 51, 5, .16);
-      --shadow: 0 24px 65px rgba(32, 51, 5, .13);
+      --ink: #292b29;
+      --muted: #656b66;
+      --line: rgba(36, 61, 54, .16);
+      --shadow: 0 24px 65px rgba(36, 61, 54, .12);
       --radius: 28px;
       --serif: "Fraunces", Georgia, serif;
       --sans: "DM Sans", Arial, sans-serif;
@@ -132,15 +132,16 @@
       z-index: -1;
       inset: 0;
       content: "";
-      background-image: url("assets/kupukupu-pattern.svg"), url("assets/kupukupu-pattern.svg");
-      background-position: right -185px top -120px, left -230px bottom -190px;
+      background-image: url("assets/kupukupu-traced-outline.webp"), url("assets/kupukupu-traced-outline.webp");
+      background-position: right -320px top -120px, left -350px bottom -210px;
       background-repeat: no-repeat;
-      background-size: 540px, 460px;
-      opacity: .1;
+      background-size: 820px auto, 720px auto;
+      filter: brightness(0) saturate(100%) invert(23%) sepia(11%) saturate(930%) hue-rotate(110deg) brightness(91%);
+      opacity: .22;
       pointer-events: none;
     }
     main > section:nth-of-type(even)::before { transform: scaleX(-1); }
-    .support::before, footer::before { opacity: .075; }
+    .support::before, footer::before, .approach::before { filter: none; opacity: .3; }
 
     .skip-link {
       position: fixed;
@@ -158,7 +159,7 @@
     .container { width: min(1160px, calc(100% - 42px)); margin-inline: auto; }
     .eyebrow {
       margin: 0 0 14px;
-      color: var(--terra-dark);
+      color: var(--clay-dark);
       font-size: .77rem;
       font-weight: 600;
       letter-spacing: .18em;
@@ -222,21 +223,18 @@
       width: 720px;
       height: 720px;
       content: "";
-      border: 1px solid rgba(110, 142, 31, .34);
+      border: 1px solid rgba(168, 181, 162, .55);
       border-radius: 48% 52% 63% 37%;
       transform: rotate(17deg);
     }
-    .fern-motif { position: absolute; z-index: -1; pointer-events: none; color: var(--clay); }
-    .fern-motif-hero { bottom: -145px; left: -95px; width: min(370px, 31vw); opacity: .13; transform: rotate(-17deg); transform-origin: bottom center; }
-    .fern-motif .fern-stem { fill: none; stroke: currentColor; stroke-linecap: round; stroke-width: 5; }
-    .fern-motif .fern-leaf { fill: currentColor; }
+    .hero::after { position: absolute; z-index: -1; bottom: -170px; left: -280px; width: 760px; height: 570px; content: ""; background: url("assets/kupukupu-traced-outline.webp") center / contain no-repeat; filter: brightness(0) saturate(100%) invert(23%) sepia(11%) saturate(930%) hue-rotate(110deg) brightness(91%); opacity: .12; pointer-events: none; }
     .hero-grid { display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: clamp(42px, 7vw, 100px); }
     .hero-copy { position: relative; z-index: 2; }
     .hero-copy .lede { max-width: 610px; margin-top: 27px; }
     .hero-note { display: flex; align-items: center; gap: 10px; margin-top: 28px; color: var(--forest); font-size: .9rem; }
     .hero-note::before { width: 34px; height: 1px; content: ""; background: var(--terra); }
-    .availability-pill { width: fit-content; display: inline-flex; align-items: center; gap: 9px; margin-top: 18px; padding: 9px 14px; color: var(--forest); border: 1px solid rgba(32,51,5,.18); border-radius: 999px; background: rgba(229,235,216,.82); font-size: .8rem; font-weight: 600; }
-    .availability-pill::before { width: 8px; height: 8px; content: ""; border-radius: 50%; background: #6e8e1f; box-shadow: 0 0 0 4px rgba(110,142,31,.16); }
+    .availability-pill { width: fit-content; display: inline-flex; align-items: center; gap: 9px; margin-top: 18px; padding: 9px 14px; color: var(--forest); border: 1px solid rgba(36,61,54,.18); border-radius: 999px; background: rgba(223,230,220,.72); font-size: .8rem; font-weight: 600; }
+    .availability-pill::before { width: 8px; height: 8px; content: ""; border-radius: 50%; background: #4d8a66; box-shadow: 0 0 0 4px rgba(77,138,102,.13); }
     .hero-visual { position: relative; min-height: 590px; }
     .hero-photo {
       position: absolute;
@@ -292,7 +290,7 @@
 
     /* Support areas */
     .support { padding: 128px 0; background: var(--forest); }
-    .support .eyebrow { color: #dfb7a7; }
+    .support .eyebrow { color: #e6bba8; }
     .support h2, .support h3 { color: var(--cream); }
     .support .lede { color: rgba(247, 244, 238, .72); }
     .support-head { display: flex; align-items: end; justify-content: space-between; gap: 50px; margin-bottom: 52px; }
@@ -317,20 +315,20 @@
     .signature span { color: var(--muted); font-size: .88rem; }
 
     /* Therapeutic approach */
-    .approach { padding: 128px 0; background: var(--forest); }
-    .approach::before { opacity: .085 !important; }
+    .approach { padding: 128px 0; background: var(--cream); }
+    .approach::before { filter: brightness(0) saturate(100%) invert(23%) sepia(11%) saturate(930%) hue-rotate(110deg) brightness(91%); opacity: .18; }
     .approach-intro { max-width: 880px; margin: 0 auto; text-align: center; }
-    .approach-intro .eyebrow { color: #dfb7a7; }
-    .approach-intro h2 { margin-bottom: 30px; color: var(--cream); }
-    .approach-intro p:not(.eyebrow) { max-width: 790px; margin-inline: auto; color: rgba(255,255,255,.75); font-size: 1.08rem; }
-    .approach-intro .approach-lead { color: rgba(255,255,255,.92); font-family: var(--serif); font-size: clamp(1.35rem, 2vw, 1.85rem); font-weight: 600; line-height: 1.4; }
-    .approach-methods { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 65px; border-top: 1px solid rgba(255,255,255,.18); }
-    .approach-method { padding: 34px 34px 10px; border-left: 1px solid rgba(255,255,255,.18); }
+    .approach-intro .eyebrow { color: var(--clay-dark); }
+    .approach-intro h2 { margin-bottom: 30px; color: var(--forest); }
+    .approach-intro p:not(.eyebrow) { max-width: 790px; margin-inline: auto; color: var(--muted); font-size: 1.08rem; }
+    .approach-intro .approach-lead { color: var(--forest); font-family: var(--serif); font-size: clamp(1.35rem, 2vw, 1.85rem); font-weight: 600; line-height: 1.4; }
+    .approach-methods { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 65px; border-top: 1px solid var(--line); }
+    .approach-method { padding: 34px 34px 10px; border-left: 1px solid var(--line); }
     .approach-method:first-child { padding-left: 0; border-left: 0; }
     .approach-method:last-child { padding-right: 0; }
-    .approach-method-number { display: block; margin-bottom: 24px; color: #dfb7a7; font-size: .75rem; font-weight: 600; letter-spacing: .16em; }
-    .approach-method h3 { margin-bottom: 14px; color: var(--cream); font-size: clamp(1.55rem, 2vw, 2rem); }
-    .approach-method p { margin: 0; color: rgba(255,255,255,.68); }
+    .approach-method-number { display: block; margin-bottom: 24px; color: var(--clay-dark); font-size: .75rem; font-weight: 600; letter-spacing: .16em; }
+    .approach-method h3 { margin-bottom: 14px; color: var(--forest); font-size: clamp(1.55rem, 2vw, 2rem); }
+    .approach-method p { margin: 0; color: var(--muted); }
 
     /* Office gallery */
     .office-gallery { padding: 128px 0; background: var(--paper); }
@@ -378,7 +376,7 @@
     .visit { padding: 128px 0; }
     .visit-grid { display: grid; grid-template-columns: .78fr 1.22fr; align-items: stretch; gap: 24px; }
     .visit-info { padding: clamp(35px, 5vw, 62px); color: var(--cream); border-radius: var(--radius); background: var(--forest); }
-    .visit-info .eyebrow { color: #dfb7a7; }
+    .visit-info .eyebrow { color: #e6bba8; }
     .visit-info h2 { color: var(--cream); }
     .visit-info > p { margin-top: 25px; color: rgba(255,255,255,.72); }
     address { margin: 34px 0; padding: 23px 0; border-block: 1px solid rgba(255,255,255,.16); color: white; font-style: normal; }
@@ -410,7 +408,7 @@
     .field.full { grid-column: 1 / -1; }
     label { color: var(--forest); font-size: .84rem; font-weight: 600; }
     input, select, textarea { width: 100%; padding: 15px 16px; color: var(--ink); border: 1px solid rgba(36,61,54,.25); border-radius: 12px; outline: none; background: var(--cream); }
-    input:focus, select:focus, textarea:focus { border-color: var(--clay); box-shadow: 0 0 0 3px rgba(110,142,31,.18); }
+    input:focus, select:focus, textarea:focus { border-color: var(--clay); box-shadow: 0 0 0 3px rgba(184,115,89,.13); }
     textarea { min-height: 145px; resize: vertical; }
     .form-note { grid-column: 1 / -1; margin: 0; color: var(--muted); font-size: .78rem; }
     .contact button { cursor: pointer; }
@@ -422,7 +420,7 @@
     .crisis-icon { display: grid; width: 38px; height: 38px; place-items: center; color: white; border-radius: 50%; background: var(--clay); font-weight: 600; }
     .crisis strong { color: var(--forest); }
     .crisis p { margin: 3px 0 0; color: var(--muted); font-size: .88rem; }
-    footer { padding: 64px 0 30px; color: rgba(255,255,255,.75); background: #182704; }
+    footer { padding: 64px 0 30px; color: rgba(255,255,255,.75); background: #1b302a; }
     .footer-grid { display: grid; grid-template-columns: 1.6fr .4fr; gap: 70px; }
     footer .wordmark { color: var(--cream); }
     .footer-blurb { max-width: 430px; margin-top: 22px; font-size: .9rem; }
@@ -440,7 +438,7 @@
       .nav-links.open { display: flex; }
       .nav-links > a:not(.btn) { padding: 8px 2px; }
       .hero { min-height: auto; }
-      .fern-motif-hero { left: -120px; width: 330px; opacity: .1; }
+      .hero::after { left: -330px; opacity: .1; }
       .hero-grid, .welcome-grid, .about-grid, .insurance-grid, .visit-grid, .contact-grid, .office-gallery-head { grid-template-columns: 1fr; }
       .hero-visual { min-height: 530px; }
       .hero-photo { inset-left: 0; }
@@ -448,7 +446,7 @@
       .section-head { grid-template-columns: 1fr; gap: 24px; }
       .service-grid { grid-template-columns: 1fr; }
       .approach-methods { grid-template-columns: 1fr; }
-      .approach-method, .approach-method:first-child, .approach-method:last-child { padding: 28px 0; border-left: 0; border-bottom: 1px solid rgba(255,255,255,.18); }
+      .approach-method, .approach-method:first-child, .approach-method:last-child { padding: 28px 0; border-left: 0; border-bottom: 1px solid var(--line); }
       .approach-method:last-child { border-bottom: 0; }
       .service-card { min-height: 330px; }
       .support-head { display: block; }
@@ -469,7 +467,7 @@
       .site-header .btn { width: 100%; }
       .hero, .welcome, .services, .support, .about, .approach, .office-gallery, .insurance, .booking, .visit, .contact { padding: 88px 0; }
       .hero { padding-top: 56px; }
-      .fern-motif-hero { bottom: -80px; left: -105px; width: 260px; opacity: .09; }
+      .hero::after { bottom: -120px; left: -350px; width: 650px; opacity: .08; }
       .hero-visual { min-height: 440px; margin-top: 12px; }
       .hero-photo { inset: 0 0 25px 15px; border-radius: 145px 145px 25px 25px; }
       .photo-label { right: 10px; max-width: 205px; padding: 16px; font-size: 1.2rem; }
@@ -518,21 +516,6 @@
 
   <main id="main">
     <section class="hero" id="top">
-      <svg class="fern-motif fern-motif-hero" viewBox="0 0 300 640" aria-hidden="true" focusable="false">
-        <path class="fern-stem" d="M145 625C150 510 143 393 156 279C164 204 176 129 194 36"/>
-        <g class="fern-leaf">
-          <path d="M149 559C111 533 67 530 28 548C70 558 109 570 149 559Z"/><path d="M150 545C184 511 225 497 268 501C233 522 195 542 150 545Z"/>
-          <path d="M150 500C115 473 76 464 38 475C75 490 111 507 150 500Z"/><path d="M152 486C184 452 222 436 263 438C230 460 194 482 152 486Z"/>
-          <path d="M152 442C120 414 84 402 48 410C83 428 116 446 152 442Z"/><path d="M154 427C183 393 218 376 256 376C225 400 191 422 154 427Z"/>
-          <path d="M155 384C126 356 94 342 60 347C92 366 122 385 155 384Z"/><path d="M157 369C183 335 214 318 249 316C221 340 190 363 157 369Z"/>
-          <path d="M159 327C133 300 104 284 74 287C102 307 130 327 159 327Z"/><path d="M161 313C184 280 212 261 243 258C218 283 190 306 161 313Z"/>
-          <path d="M165 271C143 246 119 229 91 229C116 249 140 270 165 271Z"/><path d="M168 257C188 226 211 208 238 202C217 227 194 250 168 257Z"/>
-          <path d="M173 216C154 193 134 177 111 175C131 194 151 214 173 216Z"/><path d="M176 203C192 176 212 157 234 151C216 174 197 196 176 203Z"/>
-          <path d="M181 164C166 145 150 131 131 128C147 144 164 161 181 164Z"/><path d="M184 152C197 129 213 113 231 105C217 126 202 146 184 152Z"/>
-          <path d="M190 116C179 102 167 91 153 87C165 100 177 113 190 116Z"/><path d="M192 105C202 88 214 75 228 68C217 84 205 100 192 105Z"/>
-          <path d="M197 73C190 64 183 57 174 53C182 61 189 69 197 73Z"/><path d="M199 65C207 53 216 44 226 38C218 50 209 61 199 65Z"/>
-        </g>
-      </svg>
       <div class="container hero-grid">
         <div class="hero-copy reveal">
           <p class="eyebrow">In-person &amp; telehealth counseling · Honolulu, Hawaiʻi</p>
