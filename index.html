@@ -354,6 +354,8 @@
     .embed-placeholder p { color: var(--muted); }
     .embed-instructions { margin-top: 20px; color: var(--clay-dark); font-size: .83rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
     .secure-note { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 22px; color: var(--muted); font-size: .83rem; }
+    .portal-fallback { max-width: 620px; margin: 14px auto 0; color: var(--muted); font-size: .82rem; line-height: 1.65; }
+    .portal-fallback a { color: var(--forest); text-underline-offset: 3px; }
     .booking-live { color: var(--forest); border-style: solid; }
     .booking-live .embed-mark { font-size: 1.9rem; }
     .booking-live .btn { min-width: 240px; margin-top: 8px; }
@@ -551,21 +553,21 @@
             <svg class="service-icon" viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="25"/><path d="M22 56c9-8 27-8 36 0M40 18c-8 8-8 20 0 28 8-8 8-20 0-28Z"/></svg>
             <h3>Individual Counseling</h3>
             <p>A supportive space to explore your experiences, strengthen coping skills and work through challenges affecting your emotional well-being and personal growth.</p>
-            <a href="#book">Request an appointment</a>
+            <a href="https://kali-ikemoto.clientsecure.me/" target="_blank" rel="noopener">Request an appointment <span aria-hidden="true">↗</span></a>
           </article>
           <article class="service-card reveal">
             <span class="service-number">02 · COUPLES</span>
             <svg class="service-icon" viewBox="0 0 80 80" aria-hidden="true"><circle cx="31" cy="40" r="22"/><circle cx="49" cy="40" r="22"/></svg>
             <h3>Couples Counseling</h3>
             <p>Thoughtful guidance for couples seeking healthier communication, deeper understanding and constructive ways to navigate conflict and change.</p>
-            <a href="#book">Request an appointment</a>
+            <a href="https://kali-ikemoto.clientsecure.me/" target="_blank" rel="noopener">Request an appointment <span aria-hidden="true">↗</span></a>
           </article>
           <article class="service-card reveal">
             <span class="service-number">03 · FAMILY</span>
             <svg class="service-icon" viewBox="0 0 80 80" aria-hidden="true"><circle cx="29" cy="31" r="16"/><circle cx="51" cy="31" r="16"/><circle cx="40" cy="51" r="16"/></svg>
             <h3>Family Counseling</h3>
             <p>Collaborative support for families experiencing conflict, transitions, behavioral concerns or difficulties communicating and connecting with one another.</p>
-            <a href="#book">Request an appointment</a>
+            <a href="https://kali-ikemoto.clientsecure.me/" target="_blank" rel="noopener">Request an appointment <span aria-hidden="true">↗</span></a>
           </article>
         </div>
       </div>
@@ -606,7 +608,7 @@
       <div class="container about-grid">
         <div class="about-image-wrap reveal">
           <div class="about-image">
-            <img src="assets/kali-ikemoto-lmft.webp" alt="Kali Ikemoto, Licensed Marriage and Family Therapist and founder of Mālama Counseling Services" width="1200" height="1598" loading="lazy" decoding="async">
+            <img src="assets/kali-ikemoto-portrait-2026.webp" alt="Kali Ikemoto, Licensed Marriage and Family Therapist and founder of Mālama Counseling Services" width="1200" height="1412" loading="lazy" decoding="async">
           </div>
           <span class="mock-badge">Kali Ikemoto · Licensed Marriage and Family Therapist</span>
         </div>
@@ -724,7 +726,8 @@
               <h3>Request an Appointment</h3>
               <p>Open Kali’s secure SimplePractice portal to view available appointment options, request a session and complete client forms.</p>
               <a class="btn btn-primary" href="https://kali-ikemoto.clientsecure.me/" target="_blank" rel="noopener">Book Securely Online <span class="arrow" aria-hidden="true">↗</span></a>
-              <p class="secure-note">🔒 Opens the secure SimplePractice client portal</p>
+              <p class="secure-note">🔒 Opens the secure SimplePractice client portal in a new tab</p>
+              <p class="portal-fallback">If SimplePractice displays a temporary error, please wait a few minutes and <a href="https://kali-ikemoto.clientsecure.me/" target="_blank" rel="noopener">try the secure portal again</a>. The scheduling portal is operated by SimplePractice and may occasionally be unavailable.</p>
             </div>
           </div>
         </div>
